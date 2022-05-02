@@ -19,30 +19,21 @@ Philosophy
 
 Instead of trying to accurately define all the awkward syntax patterns of a
 specific language, Syntacky aims to only provide syntax patterns that are easy
-to define and appear ubiquitously across many languages. Here's some examples:
+to define and appear ubiquitously across many languages. Here's a screenshot
+with some examples:
 
-- Quote-delimited "string" literals
-- Number literals like 123
-- Delimiters (), [], {}, <>
-- ALL_CAPS_CONSTANTS
-- Assigning variable = something
-- dot.path.indexing
-- scoped:paths:with:colons
-- /nav/paths/with/slashes
-- Regular expression /^[search]*/ patterns
-- Common symbols +-*/%= and Separators |:;,.
-- calling functions()
-- Pre-processor #MACROS
-- Hex Color Codes #abc123
-- Prefixed @annotations
-- -flags and --options
-- <!-- Code Coments -->
-- Select keywords like import and return
+![Screenshot](screenshot.png)
+
+By avoiding nested or overly complex syntax definitions the hope is that
+highlighting will remain performant and consistent. However, if you care more
+that language syntax is represented accurately this may not be the plugin
+for you. The aim is to apply some minimal highlighting to any file, using
+basic elements from your existing colorscheme, but not strictly following
+any conventions on how those colors are applied.
 
 
 Licensing
 ---------
 
-Copyright 2022 Brian Dellaterra
-Licensed under the EUPL version 1.2
+Copyright 2022 Brian Dellaterra. Licensed under the EUPL version 1.2
 
