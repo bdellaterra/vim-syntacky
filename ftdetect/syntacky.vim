@@ -42,7 +42,7 @@ function! SetUniversalSyntaxGroups()
 
   syntax match Separator /[-|:;,.*]/
 
-  syntax match DotPath /\<\D\@=\(\w\|-\)\+\>\.\<\(\w\|-\|\.\)\+\>/
+  syntax match DotPath /\<[a-zA-Z]\(\w\|-\)*\>\.\<\(\w\|-\|\.\)\+\>/
 
   syntax match ScopedPath /\<\%(\w\|-\)\+\(:\+\w*\)\+/
   syntax match ScopedPath /\W\@<=\(:\+\w\+\)\>/
@@ -75,7 +75,7 @@ function! SetUniversalSyntaxGroups()
   syntax match Number /\<\d\+\(\.\d\+\)*\>[.%]\@!/
 
   " Units following numeric value, like in 100px
-  syntax match Units /\<\d\(\d\|\.\)*\D\@=\zs\(\w\+\|%\)\>/ contains=NONE
+  syntax match Units /\(\<\|\|[-+]\)\d\+\.\?\(\d\|\.\)*\D\@=\zs\(\w\+\|%\)\>/ contains=NONE
 
   syntax match RegexMatch /=\~/
 
