@@ -32,7 +32,7 @@ function! SetUniversalSyntaxGroups()
   " Contains exclusion for '=~' regex matching
   syntax match Symbol /\%(\s\|\w\)\zs\(=\~\s\+\)\@![\!?=+-/*%~^&|∷→]\+\ze\%(\s\|\w\)/ contains=NONE
 
-  syntax match Prefix /\(^\|\W\)\@=[&@$#\\]\+/
+  syntax match Prefix /\(^\|\W\)\@=[!&@$#\\]\+/
 
   " Contains exclusion for '=~' regex matching
   syntax match Symbol /\(^\|\s\)\zs\(=\~\s\+\)\@![\!=+-/*%~^&|#<>∷→]\+\ze\(\s\|$\)/
@@ -40,7 +40,7 @@ function! SetUniversalSyntaxGroups()
   " For variable increment, decrement, etc
   syntax match Symbol /\w\+\zs\([-+/*%=∷→]\)\+/
 
-  syntax match Separator /[-+|:;,.]/
+  syntax match Separator /[-+/*%~|:;,.=]/
 
   syntax match DotPath /\<[a-zA-Z]\(\w\|-\)*\>\.\<\(\w\|-\|\.\)\+\>/
 
