@@ -1,0 +1,2 @@
+# vim-syntacky
+Universal Syntax
