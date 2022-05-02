@@ -40,7 +40,7 @@ function! SetUniversalSyntaxGroups()
   " For variable increment, decrement, etc
   syntax match Symbol /\w\+\zs\([-+/*%=∷→]\)\+/
 
-  syntax match Separator /[-|:;,.*]/
+  syntax match Separator /[-+|:;,.]/
 
   syntax match DotPath /\<[a-zA-Z]\(\w\|-\)*\>\.\<\(\w\|-\|\.\)\+\>/
 
@@ -72,7 +72,8 @@ function! SetUniversalSyntaxGroups()
 
   syntax match Option /\(^\|\s\|\W\)\@<=-\+\(\d\+\(\D\|$\)\)\@!\(\w\|-\)\+/
 
-  syntax match Number /\<\d\+\(\.\d\+\)*\>[.%]\@!/
+  syntax match Number /\(\<\|[-+pePE]\)\@<=\(0[bo]\)\?\d[0-9_]*\(\.\(\d\|_\)\+\)*\ze\(\s\|[pePE][-+0-9]\|\>\)%\@!/
+  syntax match Number /\(\<\|[-+]\)\@<=0x[0-9a-fA-F][0-9a-fA-F_]*\(\.[0-9a-fA-F][0-9a-fA-F_]*\)*\ze\(\s\|[pePE][-+0-9a-fA-F]\|\>\)%\@!/
 
   " Units following numeric value, like in 100px
   syntax match Units /\(\<\|\|[-+]\)\d\+\.\?\(\d\|\.\)*\D\@=\zs\(\w\+\|%\)\>/ contains=NONE
