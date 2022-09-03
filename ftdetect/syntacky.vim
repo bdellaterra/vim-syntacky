@@ -44,6 +44,7 @@ function! SetUniversalSyntaxGroups()
 
   syntax match DotPath /\<[a-zA-Z]\(\w\|-\)*\>\.\<\(\w\|-\|\.\)\+\>/
 
+  " Colon delimited
   syntax match ScopedPath /\<\%(\w\|-\)\+\(:\+\w*\)\+/
   syntax match ScopedPath /\W\@<=\(:\+\w\+\)\>/
 
