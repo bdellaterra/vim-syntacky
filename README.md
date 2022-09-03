@@ -32,6 +32,16 @@ basic elements from your existing colorscheme, but not strictly following
 any conventions on how those colors are applied.
 
 
+Configuration
+-------------
+
+You can disable this plugin for specific filetype by listing them in the global variable below:
+
+```
+let g:syntacky_ignoredFiletypes = ['markdown', 'pandoc']
+```
+
+
 Licensing
 ---------
 
