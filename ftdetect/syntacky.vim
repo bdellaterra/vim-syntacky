@@ -71,8 +71,10 @@ function! SetUniversalSyntaxGroups()
     syntax match Keyword /\<\(class\|struct\|enum\|type\)\>\(\s*=\)\@!/
   endif
 
+  " Short (-s) or long (--long) form options
   syntax match Option /\(^\|\s\|\W\)\@<=-\+\(\d\+\(\D\|$\)\)\@!\(\w\|-\)\+/
 
+  " Attempts to account for scientific notation, etc
   syntax match Number /\(\<\|[-+pePE]\)\@<=\(0[bo]\)\?\d[0-9_]*\(\.\(\d\|_\)\+\)*\ze\(\s\|[pePE][-+0-9]\|\>\)%\@!/
   syntax match Number /\(\<\|[-+]\)\@<=0x[0-9a-fA-F][0-9a-fA-F_]*\(\.[0-9a-fA-F][0-9a-fA-F_]*\)*\ze\(\s\|[pePE][-+0-9a-fA-F]\|\>\)%\@!/
 
