@@ -35,11 +35,21 @@ any conventions on how those colors are applied.
 Configuration
 -------------
 
-You can disable this plugin for specific filetype by listing them in the global variable below:
+You can disable this plugin for specific filetypes by listing them in the
+global variable below:
 
 ```
 let g:syntacky_ignoredFiletypes = ['markdown', 'pandoc']
 ```
+
+Or disable completely for all filetyes using:
+
+```
+let g:syntacky_enabled = 0
+```
+
+When this plugin is disabled native syntax/highlighting will still occur, plus
+syntax/highlighting from any other plugins which are active.
 
 
 Licensing
