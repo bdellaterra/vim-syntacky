@@ -23,7 +23,7 @@ function! SetUniversalSyntaxGroups()
   syntax region String start=/"""/ end=/"""/
   syntax region String start=/```/ end=/```/
 
-  syntax match Define /\<\%(\w\|-\)*\w\+\ze\s*:\?=\(\w\|\s\|['"({]\|$\)/
+  syntax match Define /\<\%(\w\|-\)*\w\+\ze\s*:\?=\(\w\|\s\|['"`({]\|$\)/
 
   syntax match Constant /\<[_A-Z][-_A-Z0-9]\+\>/
 
