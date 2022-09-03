@@ -1,5 +1,13 @@
 
+if !exists('g:syntacky_ignoredFiletypes')
+  let g:syntacky_ignoredFiletypes = []
+end
+
+
 function! SetUniversalSyntaxGroups()
+  if &filetype != '' && index(g:syntacky_ignoredFiletypes, &filetype) >= 0
+    return
+  endif
 
   " Clear existing syntax groups
 
@@ -118,6 +126,9 @@ endfunction
 
 
 function! SetUniversalSyntaxHighlighting()
+  if &filetype != '' && index(g:syntacky_ignoredFiletypes, &filetype) >= 0
+    return
+  endif
 
   highlight link Parens Normal 
   highlight link Rounds Parens
