@@ -1,4 +1,8 @@
 
+if get(g:, 'syntacky_enabled', 1) == 0
+  finish
+endif
+
 if !exists('g:syntacky_ignoredFiletypes')
   let g:syntacky_ignoredFiletypes = []
 end
