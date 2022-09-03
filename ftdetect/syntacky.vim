@@ -64,7 +64,7 @@ function! SetUniversalSyntaxGroups()
   syntax match Annotation /@\@<=\(\w\|-\)\+\(\s\|,\|$\)/
 
   " Assume a handful of common programming keywords, unless filetype is empty or 'text'
-  if (&ft == 'text' || $ft == 'help')
+  if (&ft == 'text' || &ft == 'pandoc'  || &ft == 'markdown' || $ft == 'help')
     syntax clear Keyword
   else
     syntax keyword Keyword import namespace package module extends macro function return yield exit
